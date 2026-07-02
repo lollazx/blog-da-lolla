@@ -119,3 +119,134 @@ footer {
 ```
 
 Esse CSS pode ser usado para estilizar uma página que apresente destinos como **Paris**, **Nova York**, **Tóquio**, **Rio de Janeiro**, **Roma** e outros lugares turísticos do mundo.
+/* Menu */
+nav{
+    background:#023e8a;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#90e0ef;
+}
+
+/* Banner */
+.hero{
+    background:url("img/banner.jpg") center/cover;
+    height:450px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:3rem;
+    text-shadow:2px 2px 10px black;
+}
+
+/* Cartões */
+.card{
+    animation:fade .8s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card img{
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+/* Galeria */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:50px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* Botão */
+button{
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* Rodapé */
+footer{
+    margin-top:60px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+/* Botão voltar ao topo */
+.topo{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#0077b6;
+    color:white;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:24px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.topo:hover{
+    background:#023e8a;
+}
+
+/* Rolagem suave */
+html{
+    scroll-behavior:smooth;
+}
